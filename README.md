@@ -174,3 +174,7 @@
 • 4 exemplo:
       • let _check: **never**
       • *indica que o valor esta errado, nunca deveria existir esta variavel*
+      • outra variavel pode receber o tipo **never**
+      • *é mais comum enquanto desenvolve do que usar no proprio codigo.*
+
+
