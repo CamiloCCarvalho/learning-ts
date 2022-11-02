@@ -73,7 +73,7 @@
      • NUMBER:
          • let exemple: number = 10
      • STRING:
-         • let exemple: string = 'Hellow World 
+         • let exemple: string = 'Hellow World'
 • ARRAY:
      • let exemple: number[] = [1,2,3]
      • let exemple: Array< number > = [1,2,3]
@@ -118,3 +118,59 @@
 
      • ira gerar o arquivo tsconfig.json com a config basica e todas opções comentadas
 
+## TYPESCRIPT - TUPLAS
+
+• Tuplas são Arrays
+      • Porem diferente do JS você declara o tipo dos valores e a quantidade
+      • Tornando isso um padrão
+      • EXEMPLO:
+           • let crew: [string, number]
+           • dessa maneira crew é uma tupla (Arra especifico)
+           • só recebe 2 valores (Obrigatório)
+           • sendo o primeiro string o segundo number (obrigatório)
+
+## TYPESCRIPT - ENUMS
+
+• Uma especie de Array de Constantes
+• Porem o index é o nome da constante
+• O valor atribuido é o numero que seria o index
+• tem como mudar o comportamento inicial para começar de 1
+      • EXEMPLO:
+           • enum Planets {
+               MERCURIO = 1,
+               VENUS,
+               TERRA,
+               MARTE
+           }
+           Planets.TERRA  //return 3 (number)
+
+• Padrão normal trabalha com numeros
+• Desta maneira ele incrementa sozinho
+• Pode atribuir valores especificos em cada um
+
+## TYPESCRIPT - EVITANDO TIPAGEM
+
+• É possivel evitar a tipagem de alguams formas veja:
+
+• 1 exemplo:
+      • function sendSpacechip(spaceship: { pilot: string, copilot?: string }) {
+          //...
+      }
+      • a **?** no **copilot** indica que pode não não existir este atributo permitindo instanciar o objeto passando apenas os parametros obrigatórios
+
+
+• 2 exemplo:
+      • let input: unknown
+      • o tipo **unknown** é desconhecido aceitando qualquer tipo, e podendo ser alterado depois
+      • *outra variavel não pode receber esta variavel*
+      • porem **unknown** recebe qualquer variavel e qualquer tipo
+
+
+• 3 exemplo:
+      • let input: **any**
+      • desta maneira para de funcionar o TypeScript e vale o JS
+      • *Evitar ao maximo usar ele*
+
+• 4 exemplo:
+      • let _check: **never**
+      • *indica que o valor esta errado, nunca deveria existir esta variavel*
