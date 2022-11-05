@@ -25,7 +25,11 @@ function addCrew() {
     var listNow = '';
     for (var index in listSpaceships)
         listNow += "".concat(listSpaceships[index].name, " \n");
-    var inputRes = prompt("Em qual Nave deseja Adicionar ?\n\n ".concat(listNow));
+    var inputRes = String(prompt("Em qual Nave deseja Adicionar ?\n\n ".concat(listNow)));
+    for (var index in listSpaceships)
+        if (listSpaceships[index].name == inputRes) {
+            listSpaceships[index].crew.push(inputRes);
+        }
 }
 /* --- Control_Flow --- */
 function showMenu() {

@@ -32,7 +32,11 @@ function addCrew(){
     let listNow:string = ''
     for(const index in listSpaceships)
         listNow += `${listSpaceships[index].name} \n`
-    let inputRes = prompt(`Em qual Nave deseja Adicionar ?\n\n ${listNow}`)
+    let inputRes:string = String(prompt(`Em qual Nave deseja Adicionar ?\n\n ${listNow}`))
+    for(const index in listSpaceships )
+        if(listSpaceships[index].name == inputRes) {
+            listSpaceships[index].crew.push(inputRes)
+        }
     
 }
 
