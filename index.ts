@@ -37,7 +37,6 @@ function addCrew(){
         if(listSpaceships[index].name == inputRes) {
             listSpaceships[index].crew.push(inputRes)
         }
-    
 }
 
 /* --- Control_Flow --- */
