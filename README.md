@@ -221,3 +221,9 @@
       sun.mass = 1.899
       sun.planets = []
 
+• Para trabalhar com classes usar da seguinte forma:
+      • class MyClass implements Planet {
+          //contrato obrigado a implementar o que vem herdado de planet (interface)
+      }
+
+• É possivel declarar as interfaces mais de uma vez para para adicionar coisas a ela. E na parte de Classes automaticamente no VSCode vai apresentar que precisa corrigir a implementação da classe para adicionar o conteudo novo.
