@@ -177,4 +177,47 @@
       • outra variavel pode receber o tipo **never**
       • *é mais comum enquanto desenvolve do que usar no proprio codigo.*
 
+## TYPESCRIPT - CRIANDO TIPOS
+
+• 1 Utilizando PipeLine para significar OU:
+      • let option: "Yes" | "No"
+      • let option: string | bolean 
+
+• 2 Utilizando Allias:
+      • type Planet = "Mercúrio" | "Vênus" | "Terra"
+      • referenciando o tipo:
+           • function x(param: Planet) {/*code here*/} 
+
+• 3 Utilizando Allias para Funções:
+      • type GreetingCallback = (name: string) => void {/*code here*/}
+      • referenciando o tipo função:
+           • function x(param: GreetingCallback) {/*code here*/}
+
+
+## TYPESCRIPT - Criando Interfaces
+
+• Interfaces é muito parecido com Allias (type) usado anteriormente
+• Interfaces é mais apropriado para trabalhar com Objetos e Classes
+• É possivel usar extends para herdar de outra **Interface**
+
+      • USANDO INTERFACE:
+      interface CelestialBody {
+          name: string
+          mass: number
+      }
+      interface Star extends CelestialBody {
+          age: number
+          planets: Planet[]
+      }
+      interface Planet extends CelestialBody {
+          population: number
+          createSatellite: (name: string) => void
+      }
+
+      • INSTANCIANDO
+      let sun: Star
+
+      sun.name = "exemple"
+      sun.mass = 1.899
+      sun.planets = []
 
